@@ -1,0 +1,61 @@
+.template__left {
+  width: 25rem;
+  padding: 5rem 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-right: 1px solid rgba($color-light, 0.3);
+
+  &--profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: spacing(10);
+
+    &__image {
+      @include box(7rem);
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    &__info {
+      h3 {
+        font-size: 1.8rem;
+        color: $color-text;
+        text-align: center;
+        font-family: $font-primary;
+      }
+    }
+  }
+
+  &--socials {
+    display: flex;
+    gap: spacing(1);
+    flex-direction: column;
+
+    a {
+      opacity: 0.6;
+      display: flex;
+      gap: spacing(2);
+      font-size: 1.8rem;
+      color: $color-text;
+      align-items: center;
+      white-space: nowrap;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: $font-primary;
+      justify-content: flex-start;
+      transition: all 0.3s ease-out;
+      padding: spacing(3) spacing(3);
+
+      &:hover {
+        opacity: 0.9;
+        color: $color-black;
+        transform: translateX(1rem);
+        background-color: $color-light;
+      }
+    }
+  }
+}

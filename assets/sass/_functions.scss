@@ -1,0 +1,3 @@
+@function spacing($repeat) {
+  @return $repeat * 0.5rem;
+}
