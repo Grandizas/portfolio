@@ -1,8 +1,16 @@
 <template>
-  <div>
-    <h1>Header</h1>
-    <main>
+  <main>
+    <templates-left-bar />
+    <div class="template__main">
       <slot />
-    </main>
-  </div>
+    </div>
+  </main>
 </template>
+
+<style lang="scss">
+main {
+  display: flex;
+  min-height: 100vh;
+  background-color: red;
+}
+</style>
