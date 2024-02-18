@@ -23,30 +23,28 @@
     &__info {
       h3 {
         font-size: 1.8rem;
-        color: $color-text;
         text-align: center;
         font-family: $font-primary;
+        color: $color-text-secondary;
       }
     }
   }
 
   &--socials {
     display: flex;
-    gap: spacing(1);
     flex-direction: column;
 
     a {
-      opacity: 0.6;
       display: flex;
       gap: spacing(2);
       font-size: 1.8rem;
-      color: $color-text;
       align-items: center;
       white-space: nowrap;
       text-decoration: none;
       text-transform: uppercase;
       font-family: $font-primary;
       justify-content: flex-start;
+      color: $color-text-secondary;
       transition: all 0.3s ease-out;
       padding: spacing(3) spacing(3);
 

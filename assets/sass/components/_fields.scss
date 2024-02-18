@@ -6,7 +6,7 @@
   pointer-events: none;
   justify-content: center;
   mix-blend-mode: difference;
-  transition: all 0.1s ease-out;
+  // transition: all 0.1s ease-out;
   border: 1px solid $color-light;
 
   // * --- [ By default ] --- *
@@ -15,7 +15,7 @@
     background-color: rgba($color-light, 0.1);
 
     .cursor__center {
-      @include box(0.75rem);
+      @include box(0.5rem);
       background-color: $color-light;
     }
   }
@@ -23,12 +23,11 @@
   // * --- [ While animated ] --- *
   &.animated-cursor {
     @include box(4rem);
-    // transform: translate(-2rem, -2rem);
-    background-color: rgba($color-light, 0.1);
+    background-color: rgba($color-light, 0.8);
 
     .cursor__center {
       @include box(1rem);
-      background-color: $color-light;
+      background-color: rgba($color-light, 0.1);
     }
   }
 

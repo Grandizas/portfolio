@@ -9,9 +9,14 @@
 @import './normalize';
 
 // * --- [ Layout ] --- *
+@import './layout/header';
 @import './layout/template';
 @import './layout/templateLeft';
 @import './layout/templateMain';
 
+// * --- [ Pages ] --- *
+@import './page/index';
+
 // * --- [ Components ] --- *
 @import './components/fields';
+@import './components/button';

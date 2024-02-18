@@ -1,0 +1,35 @@
+.container__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    font-size: 1.4rem;
+    font-family: $font-primary;
+    color: $color-text-secondary;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    position: relative;
+    color: $color-text;
+    @include box(5rem);
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid rgba($color-light, 0.1);
+
+    i {
+      top: 55%;
+      left: 50%;
+      position: absolute;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+      background-color: rgba($color-light, 0.1);
+    }
+  }
+}

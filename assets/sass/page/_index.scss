@@ -1,0 +1,27 @@
+.landing-page {
+  height: inherit;
+
+  &__title {
+    font-size: 7vw;
+    margin-bottom: 2rem;
+    letter-spacing: 1.5rem;
+    text-transform: uppercase;
+    font-family: $font-secondary;
+    color: $color-text-secondary;
+  }
+
+  &__description {
+    max-width: 80%;
+    line-height: 1.7;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 15rem;
+    color: $color-text-secondary;
+    font-family: $font-secondary;
+  }
+
+  &__footer {
+    max-width: 90%;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,48 @@
+.entrance-button {
+  display: flex;
+  color: $color-text;
+  font-family: $font-secondary;
+  background-color: rgba($color-red, 0.6);
+
+  * {
+    pointer-events: none;
+  }
+
+  &__left,
+  &__right {
+    padding: 4rem;
+  }
+
+  &__left {
+    display: flex;
+    gap: spacing(5);
+    position: relative;
+    align-items: center;
+
+    &--number {
+      font-size: 2.5rem;
+    }
+
+    &--text {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__right {
+    font-size: 2rem;
+    background-color: $color-red;
+
+    span {
+      display: block;
+      @include box(2rem);
+      position: relative;
+
+      i {
+        top: 80%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
