@@ -15,23 +15,23 @@
 
       <!-- * --- [ Socials ] --- * -->
       <div class="template__left--socials">
-        <a href="#">
+        <a href="#" class="animate-cursor-element">
           <i class="fi fi-brands-linkedin"></i>
           <span>Linked In</span>
         </a>
-        <a href="#">
+        <a href="#" class="animate-cursor-element">
           <i class="fi fi-brands-github"></i>
           <span>Github</span>
         </a>
-        <a href="#">
+        <a href="#" class="animate-cursor-element">
           <i class="fi fi-brands-twitter"></i>
           <span>Twitter</span>
         </a>
-        <a href="#">
+        <a href="#" class="animate-cursor-element">
           <i class="fi fi-brands-instagram"></i>
           <span>Instagram</span>
         </a>
-        <a href="#">
+        <a href="#" class="animate-cursor-element">
           <i class="fi fi-brands-facebook"></i>
           <span>Facebook</span>
         </a>
@@ -39,7 +39,3 @@
     </div>
   </div>
 </template>
-
-<style lang="scss"></style>
-
-<script setup lang="ts"></script>

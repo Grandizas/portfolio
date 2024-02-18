@@ -1,0 +1,40 @@
+.cursor {
+  display: flex;
+  position: fixed;
+  border-radius: 50%;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  mix-blend-mode: difference;
+  transition: all 0.1s ease-out;
+  border: 1px solid $color-light;
+
+  // * --- [ By default ] --- *
+  &:not(.animated-cursor) {
+    @include box(2rem);
+    background-color: rgba($color-light, 0.1);
+
+    .cursor__center {
+      @include box(0.75rem);
+      background-color: $color-light;
+    }
+  }
+
+  // * --- [ While animated ] --- *
+  &.animated-cursor {
+    @include box(4rem);
+    // transform: translate(-2rem, -2rem);
+    background-color: rgba($color-light, 0.1);
+
+    .cursor__center {
+      @include box(1rem);
+      background-color: $color-light;
+    }
+  }
+
+  &__center {
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+}
