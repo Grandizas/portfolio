@@ -46,3 +46,45 @@
     }
   }
 }
+
+/* ----------------------------------------- */
+/*          [ Button - Page down ]
+/* ----------------------------------------- */
+.button-page-down {
+  color: #fff;
+  font-size: 1.6rem;
+  @include box(7rem);
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: transparent;
+  transition: all 500ms ease-out;
+
+  &:hover {
+    color: #000;
+    transform: scale(1.2);
+    background-color: #fff;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  i {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    justify-content: center;
+  }
+
+  &.move-down-animation {
+    opacity: 0.2;
+    transform: translateY(4rem);
+
+    &:hover {
+      color: #fff;
+      border: 1px solid #fff;
+      background-color: transparent;
+    }
+  }
+}

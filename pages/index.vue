@@ -19,7 +19,11 @@
       </p>
     </div>
 
-    <div class="container__footer landing-page__footer">
+    <!-- * --- Button down --- * -->
+    <fields-button-down />
+
+    <!-- * --- Button to the next page --- * -->
+    <!-- <div class="container__footer landing-page__footer">
       <NuxtLink class="entrance-button animate-cursor-element">
         <span class="entrance-button__left">
           <span class="entrance-button__left--number">02</span>
@@ -31,7 +35,7 @@
           </span>
         </span>
       </NuxtLink>
-    </div>
+    </div> -->
   </div>
 </template>
 
