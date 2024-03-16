@@ -1,6 +1,11 @@
 <template>
 	<div class="button-page-down__wrapper">
-    <button class="button-page-down" type="button" :disabled="state.isButtonDisabled" @click="applyAnimation($event)">
+    <button
+    	class="button-page-down"
+    	type="button"
+    	:disabled="state.isButtonDisabled"
+    	@click="applyAnimation($event); emit('click')"
+    >
       <i class="fi fi-rr-chevron-double-down" />
     </button>
   </div>
@@ -14,6 +19,11 @@ const state = reactive({
 });
 
 const $basket = useIndexStore();
+
+// @ts-ignore
+const emit = defineEmits<{
+	'click': [],
+}>();
 
 function applyAnimation(e: Event) {
 	if (!e || !e.target) return;
