@@ -6,13 +6,22 @@
     	:disabled="state.isButtonDisabled"
     	@click="applyAnimation($event); emit('click')"
     >
-      <i class="fi fi-rr-chevron-double-down" />
+      <i :class="`fi fi-rr-chevron-double-${direction}`" />
     </button>
   </div>
 </template>
 
 <script setup lang="ts">
 import { useIndexStore } from '~/stores/index';
+
+// @ts-ignore
+defineProps({
+	direction: {
+		type: String,
+		default: 'down',
+		validate: (value: string) => ['down', 'up'].includes(value),
+	},
+});
 
 const state = reactive({
 	isButtonDisabled: false,

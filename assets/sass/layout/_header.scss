@@ -9,7 +9,7 @@
     color: $color-text-secondary;
   }
 
-  button {
+  button:not(.button-page-down) {
     border: none;
     outline: none;
     font-size: 2rem;

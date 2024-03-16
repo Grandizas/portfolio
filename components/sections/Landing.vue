@@ -20,7 +20,7 @@
 	  </div>
 
 	  <!-- * --- Button down --- * -->
-    <fields-button-down @click="emit('button-click')" />
+    <fields-button-scroll @click="emit('button-click')" />
 	</section>
 </template>
 
