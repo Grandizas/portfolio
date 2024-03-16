@@ -4,6 +4,10 @@
 	    <div class="container__header__title">
 	      <h2><span>02</span> About me page </h2>
 	    </div>
+
+	    <!-- * --- Button up --- * -->
+    <fields-button-scroll direction="up" @click="emit('button-click')" />
+
 	    <button class="container__header__burger">
 	      <i class="fi fi-rr-menu-burger"></i>
 	    </button>
@@ -36,3 +40,10 @@
 	  </div>
 	</section>
 </template>
+
+<script setup lang="ts">
+// @ts-ignore
+const emit = defineEmits<{
+	'button-click': [],
+}>();
+</script>

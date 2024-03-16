@@ -4,7 +4,7 @@
     <sections-landing v-if="state.section === 1" @button-click="state.section++" />
 
     <template v-else>
-      <sections-about />
+      <sections-about @button-click="state.section = 1" />
     </template>
 
   </div>
