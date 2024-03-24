@@ -16,7 +16,6 @@
     line-height: 1.7;
     font-size: 1.6rem;
     letter-spacing: 1px;
-    margin-bottom: 15rem;
     color: $color-text-secondary;
     font-family: $font-secondary;
   }
@@ -25,4 +24,8 @@
     max-width: 90%;
     justify-content: flex-end;
   }
+}
+
+#section-1 .landing-page__description {
+  margin-bottom: 15rem;
 }

@@ -6,7 +6,7 @@
 	    </div>
 
 	    <!-- * --- Button up --- * -->
-    <fields-button-scroll direction="up" @click="emit('button-click')" />
+    	<fields-button-scroll direction="up" @click="emit('button-click-up')" />
 
 	    <button class="container__header__burger">
 	      <i class="fi fi-rr-menu-burger"></i>
@@ -38,6 +38,9 @@
 	      Currently I'm working as a Nuxt.js front-end web developer. My job located in Lithuania, Klaipėda.
 	    </p>
 	  </div>
+
+	  <!-- * --- Button down --- * -->
+    <fields-button-scroll @click="emit('button-click')" />
 	</section>
 </template>
 
@@ -45,5 +48,6 @@
 // @ts-ignore
 const emit = defineEmits<{
 	'button-click': [],
+	'button-click-up': [],
 }>();
 </script>
