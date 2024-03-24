@@ -8,7 +8,8 @@
 
     <sections-about
       v-show="showSectionAbout"
-      @button-click="handleSwitch(1, false)"
+      @button-click="handleSwitch(3)"
+      @button-click-up="handleSwitch(1, false)"
     />
 
   </div>
@@ -39,10 +40,12 @@ function handleSwitch(section: number, isScrollingDown = true) {
   state.isSwitching = true;
 
   toggleAnimation('start', section, isScrollingDown);
+  document.body.style.overflow = 'hidden';
 
   setTimeout(() => {
     toggleAnimation('end', section, isScrollingDown);
     state.isSwitching = false;
+    document.body.style.overflow = 'auto';
   }, 970);
 }
 
