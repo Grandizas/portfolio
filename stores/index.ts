@@ -1,6 +1,6 @@
 export const useIndexStore = defineStore('index', {
   state: () => ({
-    timeoutForPageScroll: 5000,
+    timeoutForPageScroll: 1000,
   }),
   actions: {},
 })
