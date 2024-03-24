@@ -43,7 +43,7 @@ function handleSwitch(section: number, isScrollingDown = true) {
   setTimeout(() => {
     toggleAnimation('end', section, isScrollingDown);
     state.isSwitching = false;
-  }, 1000);
+  }, 970);
 }
 
 function toggleAnimation(status: 'start' | 'end', section: number, isScrollingDown: boolean) {
