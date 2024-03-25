@@ -1,8 +1,4 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json",
-  "include": [
-    "global.d.ts",
-    // Other files or directories to include...
-  ]
+  "extends": "./.nuxt/tsconfig.json"
 }

@@ -1,38 +1,33 @@
 <template>
   <div class="container landing-page">
-    
-    <sections-landing
-      v-show="showLandingSection"
-      @button-click="handleSwitch(2)"
-    />
+    <sections-landing v-show="showLandingSection" @button-click="handleSwitch(2)" />
 
     <sections-about
       v-show="showSectionAbout"
       @button-click="handleSwitch(3)"
       @button-click-up="handleSwitch(1, false)"
     />
-
   </div>
 </template>
 
 <script setup lang="ts">
-// @ts-ignore
 definePageMeta({
   layout: 'default',
 });
 
-// @ts-ignore
 const state = reactive({
   section: 1,
   isSwitching: false,
 });
 
 const showLandingSection = computed(() => {
-  return state.section === 1 || state.isSwitching && state.section === 2;
+  return state.section === 1 || (state.isSwitching && state.section === 2);
 });
 
 const showSectionAbout = computed(() => {
-  return state.section === 2 || state.isSwitching && state.section === 1 || state.isSwitching && state.section === 3;
+  return (
+    state.section === 2 || (state.isSwitching && state.section === 1) || (state.isSwitching && state.section === 3)
+  );
 });
 
 function handleSwitch(section: number, isScrollingDown = true) {
@@ -50,10 +45,12 @@ function handleSwitch(section: number, isScrollingDown = true) {
 }
 
 function toggleAnimation(status: 'start' | 'end', section: number, isScrollingDown: boolean) {
-  const firstAnimatedElement
-    = document.querySelector(`#section-${isScrollingDown ? section - 1 : section}`) as HTMLElement;
-  const secondAnimatedElement
-    = document.querySelector(`#section-${isScrollingDown ? section :  section + 1}`) as HTMLElement;
+  const firstAnimatedElement = document.querySelector(
+    `#section-${isScrollingDown ? section - 1 : section}`,
+  ) as HTMLElement;
+  const secondAnimatedElement = document.querySelector(
+    `#section-${isScrollingDown ? section : section + 1}`,
+  ) as HTMLElement;
 
   // ------------ [ Apply animation classes ] ------------
   if (status === 'start' && firstAnimatedElement && secondAnimatedElement) {
@@ -76,5 +73,4 @@ function toggleAnimation(status: 'start' | 'end', section: number, isScrollingDo
     }
   }
 }
-
 </script>
