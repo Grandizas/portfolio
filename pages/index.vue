@@ -7,6 +7,8 @@
       @button-click="handleSwitch(3)"
       @button-click-up="handleSwitch(1, false)"
     />
+
+    <sections-projects v-show="showSectionProjects" @button-click-up="handleSwitch(2, false)" />
   </div>
 </template>
 
@@ -17,11 +19,12 @@ definePageMeta({
 
 const state = reactive({
   section: 1,
+  previousSection: 1,
   isSwitching: false,
 });
 
 const showLandingSection = computed(() => {
-  return state.section === 1 || (state.isSwitching && state.section === 2);
+  return state.section === 1 || (state.isSwitching && state.previousSection === 1 && state.section === 2);
 });
 
 const showSectionAbout = computed(() => {
@@ -30,7 +33,16 @@ const showSectionAbout = computed(() => {
   );
 });
 
+const showSectionProjects = computed(() => {
+  return (
+    state.section === 3 ||
+    (state.isSwitching && state.previousSection === 3 && state.section === 2) ||
+    (state.isSwitching && state.section === 4)
+  );
+});
+
 function handleSwitch(section: number, isScrollingDown = true) {
+  state.previousSection = state.section;
   state.section = section;
   state.isSwitching = true;
 
@@ -62,7 +74,7 @@ function toggleAnimation(status: 'start' | 'end', section: number, isScrollingDo
       secondAnimatedElement.classList.add('fade-in-section-up');
     }
 
-    // ------------ [ Remove animaiton classes ] ------------
+    // ------------ [ Remove animation classes ] ------------
   } else if (status === 'end' && firstAnimatedElement && secondAnimatedElement) {
     if (isScrollingDown) {
       firstAnimatedElement.classList.remove('fade-out-section-down');
