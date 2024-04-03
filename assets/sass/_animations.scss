@@ -1,78 +1,86 @@
 .fade-out-section-down {
-	animation: fade-out-section-down 1s ease-out;
+  animation: fade-out-section-down 1s ease-out;
 }
 
 @keyframes fade-out-section-down {
-	0% {
-		top: 0;
-		opacity: 1;
-		position: absolute;
-		transform:translateY(0%)
-	}
-	100% {
-		top: 0;
-		opacity: 0;
-		position: absolute;
-		transform:translateY(-100%)
-	}
+  0% {
+    top: 0;
+    opacity: 1;
+    width: 100%;
+    position: absolute;
+    transform: translateY(0%);
+  }
+  100% {
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-100%);
+  }
 }
 
 .fade-in-section-down {
-	animation: fade-in-section-down 1s ease-out;
+  animation: fade-in-section-down 1s ease-out;
 }
 
 @keyframes fade-in-section-down {
-	0% {
-		top: 0;
-		opacity: 0;
-		position: absolute;
-		transform:translateY(100%)
-	}
-	100% {
-		top: 0;
-		opacity: 1;
-		position: absolute;
-		transform:translateY(0%)
-	}
+  0% {
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    transform: translateY(100%);
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    width: 100%;
+    position: absolute;
+    transform: translateY(0%);
+  }
 }
 
 /* ----------------------------------------- */
 /*          [ Scroll up animations ]
 /* ----------------------------------------- */
 .fade-out-section-up {
-	animation: fade-out-section-up 1s ease-out;
+  animation: fade-out-section-up 1s ease-out;
 }
 
 @keyframes fade-out-section-up {
-	0% {
-		top: 0;
-		opacity: 0;
-		position: absolute;
-		transform:translateY(-100%)
-	}
-	100% {
-		top: 0;
-		opacity: 1;
-		position: absolute;
-		transform:translateY(0%)
-	}
+  0% {
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-100%);
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    width: 100%;
+    position: absolute;
+    transform: translateY(0%);
+  }
 }
 
 .fade-in-section-up {
-	animation: fade-in-section-up 1s ease-out;
+  animation: fade-in-section-up 1s ease-out;
 }
 
 @keyframes fade-in-section-up {
-	0% {
-		top: 0;
-		opacity: 1;
-		position: absolute;
-		transform:translateY(0%)
-	}
-	100% {
-		top: 0;
-		opacity: 0;
-		position: absolute;
-		transform:translateY(100%)
-	}
+  0% {
+    top: 0;
+    opacity: 1;
+    width: 100%;
+    position: absolute;
+    transform: translateY(0%);
+  }
+  100% {
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    transform: translateY(100%);
+  }
 }
