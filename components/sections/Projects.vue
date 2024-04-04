@@ -16,11 +16,16 @@
     <div class="container__body">
       <h1 class="landing-page__title">My Projects</h1>
       <p class="landing-page__description">
-        Here are my projects. Some of them are made for fun, some for more serious purposes. This is not the end and
-        there will be much more exciting projects!
+        Here are my projects. Some of them are made for fun, some for serious purposes. This is not the end and there
+        will be much more exciting projects!
       </p>
 
-      <div class="container__body--projects"></div>
+      <div class="container__body--projects">
+        <div class="container__body--projects__project">
+          <div class="container__body--projects__project--header"></div>
+          <div class="container__body--projects__project--body"></div>
+        </div>
+      </div>
     </div>
 
     <!-- * --- Button down --- * -->
