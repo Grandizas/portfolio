@@ -22,16 +22,21 @@
 
       <div class="container__body--projects">
         <div class="container__body--projects__project">
-          <div class="container__body--projects__project--header">Project</div>
-          <div class="container__body--projects__project--tags">
-            <div class="container__body--projects__project--tags__tag">Nuxt.js</div>
+          <div class="container__body--projects__project--image">
+            <img src="@/assets/images/projects/Summify.png" />
           </div>
-          <div class="container__body--projects__project--body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro explicabo mollitia, ipsam cum, voluptates,
-            eveniet voluptatibus earum quod provident voluptas inventore tenetur similique? Maxime, dolor? Voluptatibus
-            et ex nulla magnam.
+          <div class="container__body--projects__project--content">
+            <div class="container__body--projects__project--header">Project</div>
+            <div class="container__body--projects__project--tags">
+              <div class="container__body--projects__project--tags__tag">Nuxt.js</div>
+            </div>
+            <div class="container__body--projects__project--body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro explicabo mollitia, ipsam cum, voluptates,
+              eveniet voluptatibus earum quod provident voluptas inventore tenetur similique? Maxime, dolor?
+              Voluptatibus et ex nulla magnam.
+            </div>
+            <button class="container__body--projects__project--button" type="button">Check the project</button>
           </div>
-          <button class="container__body--projects__project--button" type="button">Check the project</button>
         </div>
       </div>
     </div>
