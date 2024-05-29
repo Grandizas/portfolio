@@ -25,7 +25,7 @@ function positionElement(e: MouseEvent) {
 
   const target = e.target as HTMLElement;
 
-  if (target.classList.contains('animate-cursor-element')) {
+  if (target.classList.contains('animate-cursor-element') || target.closest('.animate-cursor-element')) {
     cursor.value.classList.add('animated-cursor');
     state.shouldRemoveClassAfterLeave = true;
   } else if (state.shouldRemoveClassAfterLeave) {

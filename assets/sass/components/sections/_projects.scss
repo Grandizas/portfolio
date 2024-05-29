@@ -4,9 +4,11 @@
   grid-template-columns: repeat(3, 1fr);
 
   &__project {
+    position: relative;
     padding: spacing(2);
     border-radius: 0.3rem;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+    transition: all 0.5s ease;
+    background-color: #232323bf;
 
     &--content {
       margin-top: spacing(2);
@@ -15,8 +17,6 @@
     &--image,
     img {
       width: 100%;
-      z-index: -1;
-      position: relative;
       object-fit: contain;
       border-radius: 0.3rem;
     }
@@ -55,6 +55,54 @@
       font-size: 1.2rem;
       letter-spacing: 1px;
       margin-bottom: spacing(2);
+    }
+
+    &--status {
+      font-size: 1.6rem;
+      font-weight: bold;
+      text-transform: capitalize;
+      font-family: $font-secondary;
+
+      &.progress {
+        color: #225bb9;
+      }
+
+      &.done {
+        color: #22b940;
+      }
+    }
+
+    &--fade-in {
+      top: 0px;
+      left: 0px;
+      opacity: 0;
+      display: flex;
+      @include box(100%);
+      position: absolute;
+      align-items: center;
+      flex-direction: column;
+      text-decoration: unset;
+      justify-content: center;
+      transition: all 0.5s ease;
+      background-color: rgba(0, 0, 0, 0.8);
+
+      span {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $color-text;
+        letter-spacing: 1px;
+        margin-bottom: spacing(2);
+        text-transform: uppercase;
+        font-family: $font-primary;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-5px) skewX(-1deg);
+
+      .container__body--projects__project--fade-in {
+        opacity: 1;
+      }
     }
   }
 }

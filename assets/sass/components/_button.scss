@@ -88,3 +88,15 @@
     }
   }
 }
+
+/* ----------------------------------------- */
+/*             [ Regular button ]
+/* ----------------------------------------- */
+.regular-button {
+  border: unset;
+  font-size: 1.8rem;
+  font-family: $font-primary;
+  color: $color-text-secondary;
+  background-color: transparent;
+  padding: spacing(1) spacing(2);
+}

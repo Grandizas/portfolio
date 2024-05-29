@@ -1,0 +1,10 @@
+[
+  {
+    "image": "Summify.png",
+    "title": "Summify",
+    "tags": ["Nuxt 3", "Supabase", "Typescript", "SCSS", "Pinia"],
+    "description": "In this project, we (me and my colleague) aim to sell summaries of required books for students.",
+    "status": "progress",
+    "link": ""
+  }
+]

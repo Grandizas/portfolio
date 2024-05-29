@@ -21,22 +21,38 @@
       </p>
 
       <div class="container__body--projects">
-        <div class="container__body--projects__project">
+        <div
+          v-for="(project, index) in projects"
+          :key="index"
+          class="container__body--projects__project animate-cursor-element"
+        >
+          <!-- * --- [ Project Image ] --- * -->
           <div class="container__body--projects__project--image">
-            <img src="@/assets/images/projects/Summify.png" />
+            <img :src="`/projects/${project.image}`" />
           </div>
+
+          <!-- * --- [ Project Content ] --- * -->
           <div class="container__body--projects__project--content">
-            <div class="container__body--projects__project--header">Project</div>
+            <div class="container__body--projects__project--header">{{ project.title }}</div>
             <div class="container__body--projects__project--tags">
-              <div class="container__body--projects__project--tags__tag">Nuxt.js</div>
+              <div v-for="tag in project.tags" :key="tag" class="container__body--projects__project--tags__tag">
+                {{ tag }}
+              </div>
             </div>
             <div class="container__body--projects__project--body">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro explicabo mollitia, ipsam cum, voluptates,
-              eveniet voluptatibus earum quod provident voluptas inventore tenetur similique? Maxime, dolor?
-              Voluptatibus et ex nulla magnam.
+              {{ project.description }}
             </div>
-            <button class="container__body--projects__project--button" type="button">Check the project</button>
+            <div class="container__body--projects__project--status" :class="project.status">
+              Status: {{ project.status === 'progress' ? 'In Progress' : project.status }}
+            </div>
           </div>
+
+          <!-- * --- [ Project fade in ] --- * -->
+          <a :href="project.link" class="container__body--projects__project--fade-in">
+            <span>Looking for more?</span>
+            <span v-if="project.status === 'done'" class="regular-button">Check the project</span>
+            <span v-else-if="project.status === 'progress'" class="regular-button">You will have to wait!</span>
+          </a>
         </div>
       </div>
     </div>
@@ -47,6 +63,8 @@
 </template>
 
 <script setup lang="ts">
+import projects from '~/json/projects.json';
+
 const emit = defineEmits<{
   'button-click': [];
   'button-click-up': [];
