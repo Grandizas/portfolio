@@ -1,6 +1,7 @@
 .template {
   height: 100%;
   display: flex;
+  min-height: 100vh;
   position: relative;
 
   .template__background {

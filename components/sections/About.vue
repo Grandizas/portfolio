@@ -5,10 +5,14 @@
         <h2><span>02</span> About me page</h2>
       </div>
 
-      <!-- * --- Button up --- * -->
-      <fields-button-scroll direction="up" @click="emit('button-click-up')" />
+      <div class="scroll-buttons">
+        <!-- * --- Button up --- * -->
+        <fields-button-scroll direction="up" @click="emit('button-click-up')" />
+        <!-- * --- Button down --- * -->
+        <fields-button-scroll @click="emit('button-click')" />
+      </div>
 
-      <button class="container__header__burger">
+    <button class="container__header__burger">
         <i class="fi fi-rr-menu-burger"></i>
       </button>
     </div>
@@ -41,9 +45,6 @@
         Currently I'm working as a Nuxt.js front-end web developer. My job located in Lithuania, Klaipėda.
       </p>
     </div>
-
-    <!-- * --- Button down --- * -->
-    <fields-button-scroll @click="emit('button-click')" />
   </section>
 </template>
 

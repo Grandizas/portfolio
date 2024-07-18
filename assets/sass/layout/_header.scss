@@ -1,7 +1,12 @@
 .container__header {
   width: 100%;
   display: flex;
+  top: spacing(6);
+  position: sticky;
+  padding: spacing(3);
+  border-radius: 1.5rem;
   justify-content: space-between;
+  background: linear-gradient(45deg, #343434, transparent);
 
   h2 {
     font-size: 1.4rem;
