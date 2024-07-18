@@ -15,9 +15,9 @@
     max-width: 80%;
     line-height: 1.7;
     font-size: 1.6rem;
-    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: $font-primary;
     color: $color-text-secondary;
-    font-family: $font-secondary;
   }
 
   &__footer {

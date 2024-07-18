@@ -26,11 +26,6 @@
           :key="index"
           class="container__body--projects__project animate-cursor-element"
         >
-          <!-- * --- [ Project Image ] --- * -->
-          <div class="container__body--projects__project--image">
-            <img :src="`/projects/${project.image}`" />
-          </div>
-
           <!-- * --- [ Project Content ] --- * -->
           <div class="container__body--projects__project--content">
             <div class="container__body--projects__project--header">{{ project.title }}</div>
@@ -45,14 +40,15 @@
             <div class="container__body--projects__project--status" :class="project.status">
               Status: {{ project.status === 'progress' ? 'In Progress' : project.status }}
             </div>
+            <a href="#" class="container__body--projects__project--button" :class="project.status">
+              Check the project
+            </a>
           </div>
 
-          <!-- * --- [ Project fade in ] --- * -->
-          <a :href="project.link" class="container__body--projects__project--fade-in">
-            <span>Looking for more?</span>
-            <span v-if="project.status === 'done'" class="regular-button">Check the project</span>
-            <span v-else-if="project.status === 'progress'" class="regular-button">You will have to wait!</span>
-          </a>
+          <!-- * --- [ Project Image ] --- * -->
+          <div class="container__body--projects__project--image">
+            <img :src="`/projects/${project.image}`" />
+          </div>
         </div>
       </div>
     </div>

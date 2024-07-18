@@ -1,22 +1,62 @@
 .container__body--projects {
-  display: grid;
-  gap: spacing(2);
-  grid-template-columns: repeat(3, 1fr);
 
   &__project {
+    display: flex;
+    max-height: 40rem;
     position: relative;
-    padding: spacing(2);
     border-radius: 0.3rem;
     transition: all 0.5s ease;
-    background-color: #232323bf;
+    border: 1px solid #747474;
+    background-color: #2222226e;
 
-    &--content {
-      margin-top: spacing(2);
+    & > *:first-child {
+      width: 40%;
     }
 
-    &--image,
-    img {
+    & > *:last-child {
+      width: 60%;
+    }
+
+    &--content {
+      display: flex;
+      gap: spacing(4);
+      flex-direction: column;
+      padding: spacing(5) spacing(3);
+      border-right: 1px solid #747474;
+    }
+
+    &--button {
+      margin-top: auto;
+      font-weight: bold;
+      font-size: 1.4rem;
+      width: fit-content;
+      color: $color-black;
+      text-decoration: none;
+      font-family: $font-primary;
+      padding: spacing(2) spacing(4);
+      background-color: $color-light;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2) translateX(1rem);
+      }
+
+      &.progress:hover {
+        color: $color-text;
+        background-color: red;
+        text-decoration: line-through;
+      }
+    }
+
+    &--image {
       width: 100%;
+      display: flex;
+      padding: spacing(3);
+      justify-content: center;
+    }
+
+    img {
+      height: 100%;
       object-fit: contain;
       border-radius: 0.3rem;
     }
@@ -31,6 +71,7 @@
       font-size: 3.2rem;
       font-weight: bold;
       letter-spacing: 2px;
+      font-family: $font-secondary;
     }
 
     &--tags {
@@ -41,12 +82,12 @@
 
       &__tag {
         font-size: 1.2rem;
-        font-weight: bold;
         color: $color-text;
-        padding: spacing(1);
-        border-radius: 0.5rem;
+        padding: spacing(2);
+        letter-spacing: 1px;
+        border-radius: 0.2rem;
+        background-color: #2C2C2C;
         font-family: $font-secondary;
-        background-color: $color-black;
       }
     }
 
@@ -69,39 +110,6 @@
 
       &.done {
         color: #22b940;
-      }
-    }
-
-    &--fade-in {
-      top: 0px;
-      left: 0px;
-      opacity: 0;
-      display: flex;
-      @include box(100%);
-      position: absolute;
-      align-items: center;
-      flex-direction: column;
-      text-decoration: unset;
-      justify-content: center;
-      transition: all 0.5s ease;
-      background-color: rgba(0, 0, 0, 0.8);
-
-      span {
-        font-size: 2rem;
-        font-weight: bold;
-        color: $color-text;
-        letter-spacing: 1px;
-        margin-bottom: spacing(2);
-        text-transform: uppercase;
-        font-family: $font-primary;
-      }
-    }
-
-    &:hover {
-      transform: translateY(-5px) skewX(-1deg);
-
-      .container__body--projects__project--fade-in {
-        opacity: 1;
       }
     }
   }
