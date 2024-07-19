@@ -1,0 +1,50 @@
+[
+  {
+    "image": "nuxt.svg",
+    "title": "Nuxt 3",
+    "level": 6,
+    "color": "rgb(49 217 124)"
+  },
+  {
+    "image": "js.svg",
+    "title": "JS",
+    "level": 6,
+    "color": "#F3CA40"
+  },
+  {
+    "image": "css-3.svg",
+    "title": "CSS 3",
+    "level": 10,
+    "color": "#577590"
+  },
+  {
+    "image": "sass.svg",
+    "title": "SASS",
+    "level": 10,
+    "color": "#D78A76"
+  },
+  {
+    "image": "html-5.svg",
+    "title": "HTML 5",
+    "level": 10,
+    "color": "#F08A4B"
+  },
+  {
+    "image": "mysql.svg",
+    "title": "MySQL",
+    "level": 4,
+    "color": "#274690"
+  },
+  {
+    "image": "php.svg",
+    "title": "PHP",
+    "level": 3,
+    "color": "#576CA8"
+  },
+  {
+    "image": "figma.svg",
+    "title": "Figma",
+    "level": 8,
+    "color": "#00A6A6"
+  }
+]

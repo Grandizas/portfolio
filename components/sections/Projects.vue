@@ -5,8 +5,12 @@
         <h2><span>03</span> My projects</h2>
       </div>
 
-      <!-- * --- Button up --- * -->
-      <fields-button-scroll direction="up" @click="emit('button-click-up')" />
+      <div class="scroll-buttons">
+        <!-- * --- Button up --- * -->
+        <fields-button-scroll direction="up" @click="emit('button-click-up')" />
+        <!-- * --- Button down --- * -->
+        <fields-button-scroll @click="emit('button-click')" />
+      </div>
 
       <button class="container__header__burger">
         <i class="fi fi-rr-menu-burger"></i>

@@ -8,7 +8,13 @@
       @button-click-up="handleSwitch(1, false)"
     />
 
-    <sections-projects v-show="showSectionProjects" @button-click-up="handleSwitch(2, false)" />
+    <sections-projects
+      v-show="showSectionProjects"
+      @button-click="handleSwitch(4)"
+      @button-click-up="handleSwitch(2, false)"
+    />
+
+    <sections-skills v-show="showSectionSkills" @button-click-up="handleSwitch(3, false)" />
   </div>
 </template>
 
@@ -21,6 +27,7 @@ const state = reactive({
   section: 1,
   previousSection: 1,
   isSwitching: false,
+  lastScrollTop: 0,
 });
 
 const showLandingSection = computed(() => {
@@ -40,6 +47,34 @@ const showSectionProjects = computed(() => {
     (state.isSwitching && state.section === 4)
   );
 });
+
+const showSectionSkills = computed(() => {
+  return (
+    state.section === 4 ||
+    (state.isSwitching && state.previousSection === 4 && state.section === 3) ||
+    (state.isSwitching && state.section === 5)
+  );
+});
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+
+function handleScroll() {
+  const scrollTop = document.documentElement.scrollTop;
+  const header = document.querySelectorAll('.container__header')[state.section - 1] as HTMLElement;
+
+  if (scrollTop > state.lastScrollTop) {
+    header.classList.add('container__header--hide');
+  } else if (scrollTop < state.lastScrollTop) {
+    header.classList.remove('container__header--hide');
+  } // else was horizontal scroll
+  state.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+}
 
 function handleSwitch(section: number, isScrollingDown = true) {
   state.previousSection = state.section;

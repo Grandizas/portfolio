@@ -1,10 +1,12 @@
 .container__header {
+  opacity: 1;
   width: 100%;
   display: flex;
   top: spacing(6);
   position: sticky;
   padding: spacing(3);
   border-radius: 1.5rem;
+  transition: all 0.5s ease-out;
   justify-content: space-between;
   background: linear-gradient(45deg, #343434, transparent);
 
@@ -37,4 +39,9 @@
       background-color: rgba($color-light, 0.1);
     }
   }
+}
+
+.container__header--hide {
+  opacity: 0;
+  transform: translateY(-15rem);
 }
