@@ -36,6 +36,8 @@
           <span>Facebook</span>
         </a>
       </div>
+
+      <decorations-spin-text />
     </div>
   </div>
 </template>
