@@ -2,8 +2,20 @@
   {
     "image": "nuxt.svg",
     "title": "Nuxt 3",
-    "level": 6,
+    "level": 7,
     "color": "rgb(49 217 124)"
+  },
+  {
+    "image": "vue.svg",
+    "title": "Vue 3",
+    "level": 7,
+    "color": "rgb(49 217 124)"
+  },
+  {
+    "image": "react.svg",
+    "title": "React.js",
+    "level": 2,
+    "color": "#4DA1A9"
   },
   {
     "image": "js.svg",
@@ -36,10 +48,28 @@
     "color": "#274690"
   },
   {
+    "image": "mongodb.svg",
+    "title": "MongoDB",
+    "level": 2,
+    "color": "#78BC61"
+  },
+  {
     "image": "php.svg",
     "title": "PHP",
-    "level": 3,
+    "level": 2,
     "color": "#576CA8"
+  },
+  {
+    "image": "git.svg",
+    "title": "Git",
+    "level": 8,
+    "color": "#DD6031"
+  },
+  {
+    "image": "node-js.svg",
+    "title": "Node.js",
+    "level": 3,
+    "color": "#78BC61"
   },
   {
     "image": "figma.svg",

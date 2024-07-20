@@ -1,6 +1,7 @@
 .container__header {
   opacity: 1;
   width: 100%;
+  z-index: 10;
   display: flex;
   top: spacing(6);
   position: sticky;
@@ -9,6 +10,10 @@
   transition: all 0.5s ease-out;
   justify-content: space-between;
   background: linear-gradient(45deg, #343434, transparent);
+
+  & + div {
+    transition: all 0.5s ease-out;
+  }
 
   h2 {
     font-size: 1.4rem;
@@ -44,4 +49,8 @@
 .container__header--hide {
   opacity: 0;
   transform: translateY(-15rem);
+
+  & + div {
+    transform: translateY(-10rem);
+  }
 }
