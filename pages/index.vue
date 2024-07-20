@@ -36,7 +36,9 @@ const showLandingSection = computed(() => {
 
 const showSectionAbout = computed(() => {
   return (
-    state.section === 2 || (state.isSwitching && state.section === 1) || (state.isSwitching && state.section === 3)
+    state.section === 2 ||
+    (state.isSwitching && state.section === 1) ||
+    (state.isSwitching && state.section === 3 && state.previousSection === 2)
   );
 });
 
@@ -44,7 +46,7 @@ const showSectionProjects = computed(() => {
   return (
     state.section === 3 ||
     (state.isSwitching && state.previousSection === 3 && state.section === 2) ||
-    (state.isSwitching && state.section === 4)
+    (state.isSwitching && state.section === 4 && state.previousSection === 3)
   );
 });
 
@@ -52,7 +54,7 @@ const showSectionSkills = computed(() => {
   return (
     state.section === 4 ||
     (state.isSwitching && state.previousSection === 4 && state.section === 3) ||
-    (state.isSwitching && state.section === 5)
+    (state.isSwitching && state.section === 5 && state.previousSection === 4)
   );
 });
 
