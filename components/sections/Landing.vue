@@ -4,9 +4,15 @@
       <div class="container__header__title">
         <h2><span>01</span> Landing page</h2>
       </div>
-      <button class="container__header__burger">
-        <i class="fi fi-rr-menu-burger"></i>
-      </button>
+
+      <!-- * --- Burger menu --- * -->
+      <div class="container__header--right">
+        <button class="container__header__burger" @click="state.showMenu = true">
+          <i class="fi fi-rr-menu-burger"></i>
+        </button>
+
+        <templates-menu v-model="state.showMenu" />
+      </div>
     </div>
 
     <div class="container__body">
@@ -25,6 +31,10 @@
 </template>
 
 <script setup lang="ts">
+const state = reactive({
+  showMenu: false,
+});
+
 const emit = defineEmits<{
   'button-click': [];
 }>();

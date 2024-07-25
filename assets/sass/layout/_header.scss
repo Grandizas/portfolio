@@ -44,6 +44,10 @@
       background-color: rgba($color-light, 0.1);
     }
   }
+
+  &--right {
+    position: relative;
+  }
 }
 
 .container__header--hide {

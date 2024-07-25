@@ -1,0 +1,31 @@
+.right-menu {
+  top: -1.6rem;
+  width: 40rem;
+  height: 90vh;
+  right: -0.6rem;
+  position: absolute;
+  border-radius: 1.5rem;
+  border: 1px solid #4f4f4f;
+  animation: menu-fade-in 0.5s ease-out;
+  background-color: rgb(43 43 43 / 95%);
+
+  &__header {
+    width: 100%;
+    position: relative;
+
+    .container__header__burger {
+      top: spacing(3);
+      right: spacing(1);
+      position: absolute !important;
+    }
+  }
+}
+
+@keyframes menu-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
