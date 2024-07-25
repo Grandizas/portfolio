@@ -6,8 +6,8 @@
   position: absolute;
   border-radius: 1.5rem;
   border: 1px solid #4f4f4f;
-  animation: menu-fade-in 0.5s ease-out;
-  background-color: rgb(43 43 43 / 95%);
+  animation: menu-fade-in 0.2s ease-out;
+  background: linear-gradient(to bottom, rgb(35 35 35 / 90%), rgba(0, 0, 0, 0.8));
 
   &__header {
     width: 100%;
@@ -17,6 +17,84 @@
       top: spacing(3);
       right: spacing(1);
       position: absolute !important;
+    }
+  }
+
+  &__main {
+    padding: spacing(4);
+
+    &--links {
+      display: flex;
+      gap: spacing(3);
+      flex-direction: column;
+      margin-top: spacing(16);
+    }
+
+    &--link {
+      width: 100%;
+      display: flex;
+      gap: spacing(8);
+      overflow: hidden;
+      text-align: left;
+      font-weight: 800;
+      font-size: 1.6rem;
+      position: relative;
+      color: $color-text;
+      padding: spacing(3);
+      border-radius: 1.5rem;
+      background: transparent;
+      text-transform: uppercase;
+      font-family: $font-primary;
+      border: 1px solid #878787;
+      transition: all 0.2s ease-out;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+      &__background {
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        position: absolute;
+        transition: all 0.4s ease-out;
+      }
+
+      p {
+        margin: 0;
+        position: relative;
+      }
+
+      &:hover {
+        color: #2f2f2f;
+        border-color: #2f2f2f;
+      }
+
+      // &:hover &__background {
+      //   width: 100%;
+      //   background-color: $color-text;
+      // }
+
+      &__bubble {
+        top: 50%;
+        left: -1.6rem;
+        @include box(7rem);
+        position: absolute;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transition: all 0.4s ease-out;
+        background-color: $color-text;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      }
+
+      &:hover &__bubble {
+        width: 100%;
+        transform: translateY(-50%) scale(1.5);
+      }
+
+      &__icon {
+        color: #2f2f2f;
+        position: relative;
+        transform: scale(1.1);
+      }
     }
   }
 }

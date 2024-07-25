@@ -21,7 +21,7 @@
     color: $color-text-secondary;
   }
 
-  button:not(.button-page-down) {
+  .container__header__burger:not(.button-page-down) {
     border: none;
     outline: none;
     font-size: 2rem;

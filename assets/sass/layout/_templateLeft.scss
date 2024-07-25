@@ -37,12 +37,14 @@
 
   &--socials {
     display: flex;
+    gap: spacing(1);
     flex-direction: column;
 
     a {
       display: flex;
       gap: spacing(2);
       font-size: 1.8rem;
+      border-radius: 5px;
       align-items: center;
       white-space: nowrap;
       text-decoration: none;
