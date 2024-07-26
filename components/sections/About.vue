@@ -18,7 +18,7 @@
           <i class="fi fi-rr-menu-burger"></i>
         </button>
 
-        <templates-menu v-model="state.showMenu" />
+        <templates-menu v-model="state.showMenu" @switch="emit('switch', $event)" />
       </div>
     </div>
 
@@ -59,7 +59,8 @@ const state = reactive({
 });
 
 const emit = defineEmits<{
-  'button-click': [];
-  'button-click-up': [];
+  (e: 'button-click'): void;
+  (e: 'button-click-up'): void;
+  (e: 'switch', sectionIndex: number): void;
 }>();
 </script>

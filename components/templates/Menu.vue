@@ -9,7 +9,7 @@
 
     <div class="right-menu__main">
       <div class="right-menu__main--links">
-        <button type="button" class="right-menu__main--link animate-cursor-element">
+        <button type="button" class="right-menu__main--link animate-cursor-element" @click="switchPage(1)">
           <div class="right-menu__main--link__background" />
           <div class="right-menu__main--link__bubble" />
           <div class="right-menu__main--link__icon">
@@ -21,7 +21,7 @@
           </div>
         </button>
 
-        <button type="button" class="right-menu__main--link animate-cursor-element">
+        <button type="button" class="right-menu__main--link animate-cursor-element" @click="switchPage(2)">
           <div class="right-menu__main--link__background" />
           <div class="right-menu__main--link__bubble" />
           <div class="right-menu__main--link__icon">
@@ -33,7 +33,7 @@
           </div>
         </button>
 
-        <button type="button" class="right-menu__main--link animate-cursor-element">
+        <button type="button" class="right-menu__main--link animate-cursor-element" @click="switchPage(3)">
           <div class="right-menu__main--link__background" />
           <div class="right-menu__main--link__bubble" />
           <div class="right-menu__main--link__icon">
@@ -45,7 +45,7 @@
           </div>
         </button>
 
-        <button type="button" class="right-menu__main--link animate-cursor-element">
+        <button type="button" class="right-menu__main--link animate-cursor-element" @click="switchPage(4)">
           <div class="right-menu__main--link__background" />
           <div class="right-menu__main--link__bubble" />
           <div class="right-menu__main--link__icon">
@@ -71,9 +71,14 @@ defineProps({
 
 const emit = defineEmits<{
   (e: 'update:modelValue', show: boolean): void;
+  (e: 'switch', sectionIndex: number): void;
 }>();
 
 function onClickOutside() {
   emit('update:modelValue', false);
+}
+
+function switchPage(sectionIndex: number) {
+  emit('switch', sectionIndex);
 }
 </script>

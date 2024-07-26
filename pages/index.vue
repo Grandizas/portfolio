@@ -1,20 +1,22 @@
 <template>
   <div class="container landing-page">
-    <sections-landing v-show="showLandingSection" @button-click="handleSwitch(2)" />
+    <sections-landing v-show="showLandingSection" @button-click="handleSwitch(2)" @switch="onMenuSwitch" />
 
     <sections-about
       v-show="showSectionAbout"
+      @switch="onMenuSwitch"
       @button-click="handleSwitch(3)"
       @button-click-up="handleSwitch(1, false)"
     />
 
     <sections-projects
       v-show="showSectionProjects"
+      @switch="onMenuSwitch"
       @button-click="handleSwitch(4)"
       @button-click-up="handleSwitch(2, false)"
     />
 
-    <sections-skills v-show="showSectionSkills" @button-click-up="handleSwitch(3, false)" />
+    <sections-skills v-show="showSectionSkills" @switch="onMenuSwitch" @button-click-up="handleSwitch(3, false)" />
   </div>
 </template>
 
@@ -65,6 +67,11 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
+
+function onMenuSwitch(sectionIndex: number) {
+  state.previousSection = state.section;
+  state.section = sectionIndex;
+}
 
 function handleScroll() {
   const scrollTop = document.documentElement.scrollTop;
