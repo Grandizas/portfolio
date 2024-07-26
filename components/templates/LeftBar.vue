@@ -15,25 +15,37 @@
 
       <!-- * --- [ Socials ] --- * -->
       <div class="template__left--socials">
-        <a href="#" class="animate-cursor-element">
-          <i class="fi fi-brands-linkedin"></i>
+        <a
+          href="https://www.linkedin.com/in/gra%C5%BEvydas-%C5%BEilius-408577212/"
+          target="_blank"
+          class="animate-cursor-element"
+        >
+          <i class="fi fi-brands-linkedin" />
           <span>Linked In</span>
         </a>
-        <a href="#" class="animate-cursor-element">
-          <i class="fi fi-brands-github"></i>
+        <a href="https://github.com/Grandizas" target="_blank" class="animate-cursor-element">
+          <i class="fi fi-brands-github" />
           <span>Github</span>
         </a>
-        <a href="#" class="animate-cursor-element">
-          <i class="fi fi-brands-twitter"></i>
+        <a href="https://x.com/Grandizaz" target="_blank" class="animate-cursor-element">
+          <i class="fi fi-brands-twitter-alt" />
           <span>Twitter</span>
         </a>
-        <a href="#" class="animate-cursor-element">
-          <i class="fi fi-brands-instagram"></i>
+        <a href="https://www.instagram.com/grandizas/" target="_blank" class="animate-cursor-element">
+          <i class="fi fi-brands-instagram" />
           <span>Instagram</span>
         </a>
-        <a href="#" class="animate-cursor-element">
-          <i class="fi fi-brands-facebook"></i>
+        <a
+          href="https://www.facebook.com/grazvydas.zilius.35?locale=lt_LT"
+          target="_blank"
+          class="animate-cursor-element"
+        >
+          <i class="fi fi-brands-facebook" />
           <span>Facebook</span>
+        </a>
+        <a href="mailto:grazvydaszilius2001@email.com" target="_blank" class="animate-cursor-element">
+          <i class="fi fi-rr-envelope-plus" />
+          <span>Mail</span>
         </a>
       </div>
 

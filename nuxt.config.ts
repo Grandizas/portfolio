@@ -10,7 +10,7 @@ export default defineNuxtConfig({
         },
         {
           rel: 'stylesheet',
-          href: 'https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css',
+          href: 'https://cdn-uicons.flaticon.com/2.4.2/uicons-brands/css/uicons-brands.css',
         },
       ],
     },
