@@ -3,6 +3,7 @@
   width: 40rem;
   height: 90vh;
   right: -0.6rem;
+  overflow: auto;
   position: absolute;
   border-radius: 1.5rem;
   border: 1px solid #4f4f4f;
@@ -32,10 +33,17 @@
   &__main {
     padding: spacing(4);
 
+    h3 {
+      font-size: 1.6rem;
+      color: $color-light;
+      font-family: $font-primary;
+    }
+
     &--links {
       display: flex;
       gap: spacing(3);
       flex-direction: column;
+      margin-bottom: spacing(8);
     }
 
     &--link {
