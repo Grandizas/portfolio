@@ -17,4 +17,5 @@ export default defineNuxtConfig({
   },
   modules: ['@pinia/nuxt'],
   css: ['@/assets/sass/main.scss'],
+  plugins: ['~/plugins/clickOutside.d.ts'],
 });

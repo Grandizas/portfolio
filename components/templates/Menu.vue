@@ -16,6 +16,9 @@
             <i class="fi fi-rr-house-night" />
           </div>
           <p>Landing page</p>
+          <div class="right-menu__main--link__arrow">
+            <i class="fi fi-rr-arrow-right" />
+          </div>
         </button>
 
         <button type="button" class="right-menu__main--link animate-cursor-element">
@@ -25,6 +28,9 @@
             <i class="fi fi-rr-user" />
           </div>
           <p>About me</p>
+          <div class="right-menu__main--link__arrow">
+            <i class="fi fi-rr-arrow-right" />
+          </div>
         </button>
 
         <button type="button" class="right-menu__main--link animate-cursor-element">
@@ -34,6 +40,9 @@
             <i class="fi fi-rr-blueprint" />
           </div>
           <p>Projects</p>
+          <div class="right-menu__main--link__arrow">
+            <i class="fi fi-rr-arrow-right" />
+          </div>
         </button>
 
         <button type="button" class="right-menu__main--link animate-cursor-element">
@@ -43,6 +52,9 @@
             <i class="fi fi-rr-stats" />
           </div>
           <p>Skills</p>
+          <div class="right-menu__main--link__arrow">
+            <i class="fi fi-rr-arrow-right" />
+          </div>
         </button>
       </div>
     </div>
