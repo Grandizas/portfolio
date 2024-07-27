@@ -8,8 +8,6 @@
       <div class="scroll-buttons">
         <!-- * --- Button up --- * -->
         <fields-button-scroll direction="up" @click="emit('button-click-up')" />
-        <!-- * --- Button down --- * -->
-        <fields-button-scroll @click="emit('button-click')" />
       </div>
 
       <!-- * --- Burger menu --- * -->
