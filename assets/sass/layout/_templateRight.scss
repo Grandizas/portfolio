@@ -117,6 +117,25 @@
       }
     }
   }
+
+  .spotify-list {
+    position: relative;
+
+    &::before {
+      z-index: 1;
+      top: spacing(4);
+      left: spacing(3);
+      color: $color-text;
+      position: absolute;
+      content: 'Loading...';
+      font-family: $font-primary;
+    }
+
+    iframe {
+      z-index: 2;
+      position: relative;
+    }
+  }
 }
 
 @keyframes menu-fade-in {
