@@ -29,3 +29,10 @@
 @import './components/sections/skills';
 @import './components/sections/projects';
 @import './components/sections/experience';
+
+@media (min-width: 866px) and (max-width: 1200px) {
+  @import './screens/tablet.scss';
+}
+@media screen and (max-width: 865px) {
+  @import './screens/mobile.scss';
+}

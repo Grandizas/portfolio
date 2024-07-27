@@ -1,0 +1,29 @@
+.landing-page__title {
+  font-size: 6rem;
+}
+
+.container__body--projects__project {
+  max-height: unset;
+  flex-direction: column-reverse;
+
+  & > *:first-child,
+  & > *:last-child {
+    width: 100%;
+  }
+}
+
+.container__body--skills {
+  grid-template-columns: 1fr;
+
+  .skill-item__levels {
+    width: 100%;
+  }
+}
+
+.landing-page__experience {
+  grid-template-columns: 1fr;
+}
+
+.template__main {
+  padding: 2rem;
+}
