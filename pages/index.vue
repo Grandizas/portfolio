@@ -16,7 +16,25 @@
       @button-click-up="handleSwitch(2, false)"
     />
 
-    <sections-skills v-show="showSectionSkills" @switch="onMenuSwitch" @button-click-up="handleSwitch(3, false)" />
+    <sections-skills
+      v-show="showSectionSkills"
+      @switch="onMenuSwitch"
+      @button-click="handleSwitch(5)"
+      @button-click-up="handleSwitch(3, false)"
+    />
+
+    <sections-experience
+      v-show="showSectionExperience"
+      @switch="onMenuSwitch"
+      @button-click="handleSwitch(6)"
+      @button-click-up="handleSwitch(4, false)"
+    />
+
+    <sections-education
+      v-show="showSectionEducation"
+      @switch="onMenuSwitch"
+      @button-click-up="handleSwitch(5, false)"
+    />
   </div>
 </template>
 
@@ -57,6 +75,22 @@ const showSectionSkills = computed(() => {
     state.section === 4 ||
     (state.isSwitching && state.previousSection === 4 && state.section === 3) ||
     (state.isSwitching && state.section === 5 && state.previousSection === 4)
+  );
+});
+
+const showSectionExperience = computed(() => {
+  return (
+    state.section === 5 ||
+    (state.isSwitching && state.previousSection === 5 && state.section === 4) ||
+    (state.isSwitching && state.section === 5 && state.previousSection === 5)
+  );
+});
+
+const showSectionEducation = computed(() => {
+  return (
+    state.section === 6 ||
+    (state.isSwitching && state.previousSection === 6 && state.section === 5) ||
+    (state.isSwitching && state.section === 6 && state.previousSection === 6)
   );
 });
 

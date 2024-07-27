@@ -1,8 +1,8 @@
 <template>
-  <section id="section-4">
+  <section id="section-6">
     <div class="container__header">
       <div class="container__header__title">
-        <h2><span>04</span> My skills</h2>
+        <h2><span>06</span> Education</h2>
       </div>
 
       <div class="scroll-buttons">
@@ -23,19 +23,22 @@
     </div>
 
     <div class="container__body">
-      <h1 class="landing-page__title">My skills</h1>
-      <p class="landing-page__description">I’m a web developer. There is a list of my skills and it’s strength.</p>
+      <h1 class="landing-page__title">Education</h1>
 
-      <div class="container__body--skills">
-        <!-- * --- Skill items --- * -->
-        <fields-skill-item v-for="(skill, index) in skills" :key="index" :skill="skill" />
+      <div class="landing-page__experience">
+        <div v-for="education in educations" class="landing-page__experience--card">
+          <div class="landing-page__experience--card__header">{{ education.title }}</div>
+          <div class="landing-page__experience--card__content">
+            <p>{{ education.description }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import skills from '~/json/skills.json';
+import educations from '~/json/education.json';
 
 const state = reactive({
   showMenu: false,

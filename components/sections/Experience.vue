@@ -1,8 +1,8 @@
 <template>
-  <section id="section-4">
+  <section id="section-5">
     <div class="container__header">
       <div class="container__header__title">
-        <h2><span>04</span> My skills</h2>
+        <h2><span>05</span> Experience</h2>
       </div>
 
       <div class="scroll-buttons">
@@ -23,20 +23,28 @@
     </div>
 
     <div class="container__body">
-      <h1 class="landing-page__title">My skills</h1>
-      <p class="landing-page__description">I’m a web developer. There is a list of my skills and it’s strength.</p>
+      <h1 class="landing-page__title">Experience</h1>
 
-      <div class="container__body--skills">
-        <!-- * --- Skill items --- * -->
-        <fields-skill-item v-for="(skill, index) in skills" :key="index" :skill="skill" />
+      <div class="landing-page__experience">
+        <div class="landing-page__experience--card">
+          <div class="landing-page__experience--card__header">Cherry TEAM</div>
+          <div class="landing-page__experience--card__content">
+            <ul>
+              <li>
+                What was my role? <br />
+                I was responsible for building the front-end of the website using <span> Nuxt 3 </span>
+                <span> SASS </span> <span> Github </span> and Typescript, and maintaining the existing codebase.
+              </li>
+              <li>How long have I been working here? ~2.5 years</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import skills from '~/json/skills.json';
-
 const state = reactive({
   showMenu: false,
 });
