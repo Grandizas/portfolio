@@ -58,6 +58,30 @@
             <i class="fi fi-rr-arrow-right" />
           </div>
         </button>
+
+        <button type="button" class="right-menu__main--link animate-cursor-element" @click="switchPage(4)">
+          <div class="right-menu__main--link__background" />
+          <div class="right-menu__main--link__bubble" />
+          <div class="right-menu__main--link__icon">
+            <i class="fi fi-rr-flask-potion" />
+          </div>
+          <p>Experience</p>
+          <div class="right-menu__main--link__arrow">
+            <i class="fi fi-rr-arrow-right" />
+          </div>
+        </button>
+
+        <button type="button" class="right-menu__main--link animate-cursor-element" @click="switchPage(4)">
+          <div class="right-menu__main--link__background" />
+          <div class="right-menu__main--link__bubble" />
+          <div class="right-menu__main--link__icon">
+            <i class="fi fi-rr-diary-bookmark-down" />
+          </div>
+          <p>Education</p>
+          <div class="right-menu__main--link__arrow">
+            <i class="fi fi-rr-arrow-right" />
+          </div>
+        </button>
       </div>
 
       <h3>

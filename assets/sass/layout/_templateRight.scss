@@ -2,13 +2,32 @@
   top: -1.6rem;
   width: 40rem;
   height: 90vh;
-  right: -0.6rem;
+  right: -1.6rem;
   overflow: auto;
   position: absolute;
   border-radius: 1.5rem;
   border: 1px solid #4f4f4f;
   animation: menu-fade-in 0.2s ease-out;
   background: linear-gradient(to bottom, rgb(35 35 35 / 90%), rgba(0, 0, 0, 0.8));
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
   &__header {
     width: 100%;

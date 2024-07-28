@@ -136,7 +136,7 @@ function handleSwitch(section: number, isScrollingDown = true) {
     toggleAnimation('end', section, isScrollingDown);
     state.isSwitching = false;
     document.body.style.overflow = 'auto';
-  }, 970);
+  }, 1970);
 }
 
 function toggleAnimation(status: 'start' | 'end', section: number, isScrollingDown: boolean) {
