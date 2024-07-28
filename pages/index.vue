@@ -124,8 +124,13 @@ function handleSwitch(section: number, isScrollingDown = true) {
   state.section = section;
   state.isSwitching = true;
 
-  toggleAnimation('start', section, isScrollingDown);
+  window.scrollTo({
+    top: 0,
+    // behavior: 'smooth', // Optional: Smooth scrolling effect
+  });
   document.body.style.overflow = 'hidden';
+
+  toggleAnimation('start', section, isScrollingDown);
 
   setTimeout(() => {
     toggleAnimation('end', section, isScrollingDown);
