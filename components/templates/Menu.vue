@@ -4,7 +4,7 @@
     <div class="right-menu__header">
       <h2>Navigation</h2>
 
-      <button class="container__header__burger" @click="() => emit('update:modelValue', false)">
+      <button class="button__burger" @click="() => emit('update:modelValue', false)">
         <i class="fi fi-rr-menu-burger"></i>
       </button>
     </div>

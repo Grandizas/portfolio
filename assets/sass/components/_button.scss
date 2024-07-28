@@ -48,7 +48,7 @@
 }
 
 /* ----------------------------------------- */
-/*          [ Button - Page down ]
+/*               [ Button - Page down ]
 /* ----------------------------------------- */
 .button-page-down {
   color: #fff;
@@ -94,7 +94,7 @@
 }
 
 /* ----------------------------------------- */
-/*             [ Regular button ]
+/*                  [ Regular button ]
 /* ----------------------------------------- */
 .regular-button {
   border: unset;
@@ -103,4 +103,35 @@
   color: $color-text-secondary;
   background-color: transparent;
   padding: spacing(1) spacing(2);
+}
+
+/* ----------------------------------------- */
+/*                  [ Burger button ]
+/* ----------------------------------------- */
+.button__burger:not(.button-page-down) {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  position: relative;
+  color: $color-text;
+  @include box(5rem);
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 500ms ease-out;
+  border: 1px solid rgba($color-light, 0.1);
+
+  i {
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    background-color: rgba($color-light, 0.1);
+    color: #000;
+    transform: scale(1.2);
+    background-color: #fff;
+  }
 }

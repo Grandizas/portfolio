@@ -2,12 +2,12 @@
   <div class="template__left">
     <div class="template__left--content">
       <template v-if="state.screenSize <= 865">
-        <button class="template__left--burger" @click="state.isExpanded = !state.isExpanded">
+        <button class="button__burger" @click="state.isExpanded = !state.isExpanded">
           <i class="fi fi-rr-menu-burger"></i>
         </button>
       </template>
 
-      <template v-if="state.isExpanded">
+      <template v-if="state.isExpanded || state.screenSize > 865">
         <!-- * --- [ Profile ] --- * -->
         <div class="template__left--profile">
           <div class="template__left--profile__image">
@@ -65,14 +65,26 @@
 <script setup lang="ts">
 const state = reactive({
   isExpanded: false,
-  screenSize: window.innerWidth,
+  screenSize: 0,
 });
 
 onMounted(() => {
+  state.screenSize = window.innerWidth;
+
   if (window.innerWidth > 865) {
     state.isExpanded = true;
   } else {
     state.isExpanded = false;
   }
+
+  window.addEventListener('resize', handleResize);
 });
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize);
+});
+
+function handleResize() {
+  state.screenSize = window.innerWidth;
+}
 </script>

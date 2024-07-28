@@ -12,7 +12,7 @@
 
       <!-- * --- Burger menu --- * -->
       <div class="container__header--right">
-        <button class="container__header__burger" @click="state.showMenu = true">
+        <button class="button__burger" @click="state.showMenu = true">
           <i class="fi fi-rr-menu-burger"></i>
         </button>
 

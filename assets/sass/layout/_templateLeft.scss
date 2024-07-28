@@ -4,10 +4,9 @@
   background-color: rgba(0, 0, 0, 0.4);
   border-right: 1px solid rgba($color-light, 0.3);
 
-  &--burger {
-    @include box(5rem);
-    background: transparent;
-    border: 1px solid $color-text;
+  .button__burger {
+    display: block;
+    margin: 0 auto spacing(3) auto;
   }
 
   &--content {
