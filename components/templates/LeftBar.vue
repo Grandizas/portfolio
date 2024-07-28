@@ -1,13 +1,13 @@
 <template>
   <div class="template__left">
     <div class="template__left--content">
-      <template v-if="state.screenSize <= 865">
-        <button class="button__burger" @click="state.isExpanded = !state.isExpanded">
+      <template v-if="$basket.screenSize.width <= 865">
+        <button class="button__burger" @click="emit('update:isExpanded', !isExpanded)">
           <i class="fi fi-rr-menu-burger"></i>
         </button>
       </template>
 
-      <template v-if="state.isExpanded || state.screenSize > 865">
+      <template v-if="isExpanded || $basket.screenSize.width > 865">
         <!-- * --- [ Profile ] --- * -->
         <div class="template__left--profile">
           <div class="template__left--profile__image">
@@ -63,28 +63,26 @@
 </template>
 
 <script setup lang="ts">
-const state = reactive({
-  isExpanded: false,
-  screenSize: 0,
+import { useIndexStore } from '~/stores/index';
+
+const $basket = useIndexStore();
+
+defineProps({
+  isExpanded: {
+    type: Boolean,
+    default: false,
+  },
 });
+
+const emit = defineEmits<{
+  (e: 'update:isExpanded', value: boolean): void;
+}>();
 
 onMounted(() => {
-  state.screenSize = window.innerWidth;
-
-  if (window.innerWidth > 865) {
-    state.isExpanded = true;
+  if ($basket.screenSize.width > 865) {
+    emit('update:isExpanded', true);
   } else {
-    state.isExpanded = false;
+    emit('update:isExpanded', false);
   }
-
-  window.addEventListener('resize', handleResize);
 });
-
-onUnmounted(() => {
-  window.removeEventListener('resize', handleResize);
-});
-
-function handleResize() {
-  state.screenSize = window.innerWidth;
-}
 </script>
