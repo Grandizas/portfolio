@@ -57,6 +57,8 @@
         </div>
 
         <decorations-spin-text />
+
+        <p class="copyright">© 2024 Gražvydas Žilius</p>
       </template>
     </div>
   </div>
