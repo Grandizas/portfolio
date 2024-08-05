@@ -24,6 +24,5 @@ onUnmounted(() => {
 
 function handleResize() {
   $basket.screenSize.width = window.innerWidth;
-  console.log($basket.screenSize.width);
 }
 </script>

@@ -36,6 +36,7 @@
       @button-click-up="handleSwitch(5, false)"
     />
   </div>
+  <title>Gražvydas Žilius portfolio</title>
 </template>
 
 <script setup lang="ts">
