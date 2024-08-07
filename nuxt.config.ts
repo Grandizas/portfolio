@@ -16,7 +16,23 @@ export default defineNuxtConfig({
       meta: [
         {
           property: 'og:image',
-          content: '~/public/thumbnail.png',
+          content: 'https://imgur.com/a/wvsl0oD',
+        },
+        {
+          property: 'og:title',
+          content: 'Gražvydas Žilius portfolio',
+        },
+        {
+          property: 'og:description',
+          content: 'Step into the world where pixels come to life!',
+        },
+        {
+          property: 'og:url',
+          content: 'http://grazvydas.me',
+        },
+        {
+          property: 'og:type',
+          content: 'website',
         },
       ],
     },
