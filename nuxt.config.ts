@@ -16,7 +16,7 @@ export default defineNuxtConfig({
       meta: [
         {
           property: 'og:image',
-          content: 'https://imgur.com/a/wvsl0oD',
+          content: '/thumbnail.png',
         },
         {
           property: 'og:title',
