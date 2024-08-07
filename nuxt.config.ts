@@ -13,6 +13,12 @@ export default defineNuxtConfig({
           href: 'https://cdn-uicons.flaticon.com/2.4.2/uicons-brands/css/uicons-brands.css',
         },
       ],
+      meta: [
+        {
+          property: 'og:image',
+          content: '~/public/thumbnail.png',
+        },
+      ],
     },
   },
   modules: ['@pinia/nuxt'],
